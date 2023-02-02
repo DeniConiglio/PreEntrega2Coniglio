@@ -1,0 +1,269 @@
+/*reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: black;
+}
+
+header, footer {
+    display: flex;
+    flex-direction: column;
+ }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    height: 60px;
+    line-height: 60px;
+}
+
+h2{
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    font-size: large;
+    text-align: center;
+    color: white;
+    text-decoration : none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a:hover {
+    color: orangered;
+    transform: scale(1.2);
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+/*------------HOME------------*/
+/* estilo de container */
+.contenedorHome {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 3fr 1fr 0.5fr;
+
+    /* grid template areas*/
+    grid-template-areas:
+        "header header header"
+        "main  main main"
+        "main main main"
+        "footer footer footer";
+}
+
+.contenedorHome header{
+    grid-area: header;
+    padding-top: 25px;
+}
+ 
+.contenedorHome main {
+    display: grid;
+    grid-area: main;
+    place-content: center;
+    background-image: url(../img/lavela2.jpeg);
+    background-position: top;
+    background-size: cover;
+}
+
+.footHome {
+    display: grid;
+    grid-area: footer;
+    place-content: center;
+    color: white;
+    margin-bottom: 2%;
+    text-align: center;
+     padding-top: 1%;
+    opacity: .5;
+ }
+
+
+/*------------DISCOS------------*/
+ /* estilo de container */
+ .contenedorDiscos {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2 1fr auto;
+
+    grid-template-areas: 
+        "headerDisc"
+        "galeria"
+        "footerDisc";
+}
+
+.contenedorDiscos header{
+    grid-area: headerDisc;
+    font-size: xx-large;
+}
+
+.contenedorDiscos header{
+    margin-top: 20px;
+}
+
+.contenedorDiscos header nav a {
+    font-size: xx-large;
+    margin-top: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contenedorDiscos main {
+    grid-area: galeria;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1em;
+}
+
+.contenedorDiscos main .disco {
+    position: relative;
+}
+
+.contenedorDiscos main .disco img {
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.contenedorDiscos footer nav a{
+    grid-area: footerDisc;
+    text-align: center;
+}
+
+/*-----------NOSOTROS----------*/
+
+.contenedorNosotros header{
+    background-image: url( );
+    background-position: bottom;
+    opacity: .8;
+}
+
+.contenedorNosotros main {
+    color: white;
+ }
+
+
+ .contenedorNosotros main ul{
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.info{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+/*-----------SHOWS----------*/
+
+.contenedorShows {
+    padding-top: 25px;
+}
+
+.contenedorShows header h1:hover{
+    transform: rotate(360deg);
+    transition: 2s;
+    box-shadow: 1px 2px 1px white;
+}
+
+.contenedorShows div {
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    color: white;
+    text-align: center;
+}
+
+button {
+    background-color: darkslategrey;
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right:15px ;
+}
+
+ 
+/*----------CONTACTO----------*/
+.contenedorContacto header nav a {
+    font-size: large;
+    margin-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contenedorContacto header h1:hover{
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+.formulario {
+    background-color: black;
+    opacity: .8;
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 50px 40px;
+ }
+
+fieldset {
+    border-color: orangered;
+}
+
+legend {
+    text-transform: uppercase;
+    color: white;
+}
+
+.contenedorInputs {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+input {
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: white;
+    color: darkslategrey;
+}
+
+textarea {
+    border-radius: 15px;
+    padding: 25px 35px;
+    text-align: center;
+}
+
+.footContact {
+
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-size: small;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footContact nav a{
+    font-size: small;
+}
